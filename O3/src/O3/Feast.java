@@ -18,6 +18,7 @@ public class Feast {
 
 		}
 		return candyAmount;
+
 	}
 
 }
