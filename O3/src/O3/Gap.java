@@ -6,7 +6,7 @@ public static void main(String[] args) {
 	System.out.println(minimumGap(array));
 }
 public static int minimumGap(int[] arr) {
-	int count = 0;
+	int gap = 0;
 	int indexI = 0, indexJ = 0;
 	int j = arr.length - 1;
 	for (int i = 0; j > i; i++, j--) {
@@ -14,14 +14,14 @@ public static int minimumGap(int[] arr) {
 		if (arr[i] - arr[j] == 0) {
 			indexI = i;
 			indexJ = j;
-			count = indexJ - indexI;
+			gap = indexJ - indexI;
 		}
 		if (arr[i] - arr[j] != 0) {
-			count++;
+			gap++;
 		}
-		count = indexJ - indexI;
+		gap = indexJ - indexI;
 	}
-	return count;
+	return gap;
 }
 
 }
